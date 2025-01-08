@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components { 
+	.input{
+		@apply  accent-red-500 border-2  w-32 sm:w-fit rounded-md py-2 px-3 outline-none border-red-300 focus:border-red-500
+	}
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,3 +25,29 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+	::-webkit-scrollbar {
+		width: 5px;
+		z-index: 10000;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #f1f1f1;
+		z-index: 10000;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: gray;
+		z-index: 10000;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #9b9b9b;
+	}
+
